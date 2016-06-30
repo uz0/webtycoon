@@ -1,19 +1,33 @@
 import 'babel-polyfill';
 import 'zone.js/dist/zone';
 
-import {bootstrap} from '@angular/platform-browser-dynamic';
-import {Component} from '@angular/core';
-import Webtycoon from './components/webtycoon/webtycoon';
+import { bootstrap } from '@angular/platform-browser-dynamic';
+import { Component } from '@angular/core';
+import Header from './components/header/header';
+import Money from './components/money/money';
+import MoneyService from './services/money.service';
 
 @Component({
-  directives: [Webtycoon],
-  selector: 'app',
-  template: '<webtycoon></webtycoon>'
+  selector: 'webtycoon',
+  templateUrl: 'webtycoon.html',
+  directives: [
+    Header,
+    Money
+  ],
+  providers: [
+    MoneyService
+  ]
 })
-class Main {
+class Webtycoon {
+  constructor(money: MoneyService) {
+    this.money = money;
+  }
 
+  addMoney(sum) {
+    this.money.addMoney(sum);
+  }
 }
 
-bootstrap(Main).catch(error => {
+bootstrap(Webtycoon).catch(error => {
   console.log(error);
 });
