@@ -41,7 +41,7 @@ gulp.task('watch', () => {
 // transpile & move js
 gulp.task('js', ['lint'], () =>
   browserify('src/index.js', {
-    debug: false
+    debug: true
   })
   .transform(babelify)
   .bundle()
