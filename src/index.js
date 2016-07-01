@@ -32,9 +32,6 @@ class Webtycoon {
     this.money.addMoney(sum);
   }
 
-  addArticle() {
-    this.site.addArticle();
-  }
 
 }
 
