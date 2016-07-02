@@ -1,3 +1,7 @@
 site {
-  color: orange;
+  color: black;
+}
+
+site li.active{
+  color: blue;
 }

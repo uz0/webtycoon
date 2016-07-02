@@ -1,22 +1,35 @@
 import { Injectable }    from '@angular/core';
-import Article from '../components/article/article';
+import Site from './site.class';
 
 @Injectable()
 export default class SiteService {
+
   constructor(){
-    this.articles = [];
-    this.visitors = 0;
-    this.adverts = [];
+    this.list = [];
+    this.active = {};
   }
 
-  addArticle() {
-    this.articles.push(new Article('This is text'));
-    this.count = this.articles.length;
+  addSite(name){
+    if (!name){
+      return;
+    }
+
+    let site = new Site(name);
+    this.list.push(site);
+    this.setActive(site);
+    console.log(this.list);
   }
 
-  getCount(){
-    console.log(this.articles.count);
-    return this.articles.count;
+  setActive(site){
+    this.active = site;
   }
 
+  //
+  // getArticles(){
+  //   console.log(this.articles);
+  //   return this.articles;
+  // }
+  // addArticle(text){
+  //   this.articles.push();
+  // }
 }

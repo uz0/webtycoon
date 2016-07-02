@@ -7,7 +7,6 @@ export default class MoneyService {
   }
 
   get value(){
-    console.log('get money');
     return this.money;
   }
 

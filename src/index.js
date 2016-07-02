@@ -3,10 +3,12 @@ import 'zone.js/dist/zone';
 
 import { bootstrap } from '@angular/platform-browser-dynamic';
 import { Component } from '@angular/core';
+import { disableDeprecatedForms, provideForms } from '@angular/forms';
+
 import Header from './components/header/header';
 import Money from './components/money/money';
-import Site from './components/site/site';
 import MoneyService from './services/money.service';
+import Site from './components/site/site';
 import SiteService from './services/site.service';
 
 @Component({
@@ -31,10 +33,11 @@ class Webtycoon {
   addMoney(sum) {
     this.money.addMoney(sum);
   }
-
-
 }
 
-bootstrap(Webtycoon).catch(error => {
+bootstrap(Webtycoon, [
+  disableDeprecatedForms(),
+  provideForms()
+]).catch(error => {
   console.log(error);
 });
