@@ -11,3 +11,6 @@ ul
     (click)='site.setActive(current)'
   )
     | {{ current.name }}
+ul
+  li(*ngFor='let article of current.articles')
+  | {{article}}

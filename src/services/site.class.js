@@ -6,15 +6,15 @@ export default class Site{
     this.copywriters = [];
   }
 
-  addArticles(){
+  addArticle() {
     this.articles.push('text');
   }
 
-  addAdverts(){
+  addAdvert() {
     this.adverts.push('adverts');
   }
 
-  addCopywriters(){
+  addCopywriter() {
     this.copywriters.push('copywriters');
   }
 

@@ -10,6 +10,8 @@ import Money from './components/money/money';
 import MoneyService from './services/money.service';
 import Site from './components/site/site';
 import SiteService from './services/site.service';
+import Store from './components/store/store';
+import StoreService from './services/store.service';
 
 @Component({
   selector: 'webtycoon',
@@ -17,17 +19,20 @@ import SiteService from './services/site.service';
   directives: [
     Header,
     Money,
-    Site
+    Site,
+    Store
   ],
   providers: [
     MoneyService,
-    SiteService
+    SiteService,
+    StoreService
   ]
 })
 class Webtycoon {
-  constructor(money: MoneyService, site: SiteService) {
+  constructor(money:MoneyService, site:SiteService, store:StoreService) {
     this.money = money;
     this.site = site;
+    this.store = store;
   }
 
   addMoney(sum) {
