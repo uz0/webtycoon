@@ -23,13 +23,4 @@ export default class SiteService {
   setActive(site){
     this.active = site;
   }
-
-  //
-  // getArticles(){
-  //   console.log(this.articles);
-  //   return this.articles;
-  // }
-  // addArticle(text){
-  //   this.articles.push();
-  // }
 }
