@@ -1,6 +1,6 @@
 export default {
-  Article: count => count + 10,
-  Advert: count => count * 10,
-  Copywriter: count => (count + 10) * 10
+  article: count => count + 10,
+  advert: count => count * 10,
+  copywriter: count => (count + 10) * 10
 }
 

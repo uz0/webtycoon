@@ -1,4 +1,5 @@
 h1 Store
-button((click)='store.buy("Article")') Buy Article
-button((click)='store.buy("Advert")') Buy Advert
-button((click)='store.buy("Copywriter")') Buy Copywriter
+div(*ngFor='let good of goods', (click)='store.buy(good)' )
+  | {{good}} 
+  | x{{getCount(good)}}
+  | ${{getPrice(good)}}

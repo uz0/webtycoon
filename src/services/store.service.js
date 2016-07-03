@@ -21,12 +21,17 @@ export default class StoreService {
     }
 
     this.money.addMoney(-price);
-    this.site.active[`add${type}`]();
+    
+    let capitalizedType = type[0].toUpperCase() + type.slice(1);
+    this.site.active[`add${capitalizedType}`]();
+  }
+
+  getCount(type) {
+    return this.site.active[`${type}s`].length;
   }
 
   getPrice(type) {
-    let lowerType = type.toLowerCase();
-    let count = this.site.active[`${lowerType}s`].length;
+    let count = this.getCount(type);
     return configuration[type](count);
   }
 
