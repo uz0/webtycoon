@@ -29,10 +29,8 @@ import StoreService from './services/store.service';
   ]
 })
 class Webtycoon {
-  constructor(money:MoneyService, site:SiteService, store:StoreService) {
+  constructor(money:MoneyService) {
     this.money = money;
-    this.site = site;
-    this.store = store;
   }
 
   addMoney(sum) {

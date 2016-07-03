@@ -2,15 +2,16 @@ h1 Site
 input(type=text, [(ngModel)]='sitename')
 button((click)='site.addSite(sitename)') Add Site
 
-h2(*ngIf='site.active.name') Current Site: {{site.active.name}}
-
 ul
   li(
     *ngFor='let current of site.list',
     [ngClass]="{'active':current==site.active}",
     (click)='site.setActive(current)'
   )
-    | {{ current.name }}
+  | {{ current.name }}
+
+h2(*ngIf='site.active.name') Current Site: {{site.active.name}}
+h3 Articles
 ul
-  li(*ngFor='let article of current.articles')
-  | {{article}}
+li(*ngFor='let article of site.active.articles')
+| {{article}}
