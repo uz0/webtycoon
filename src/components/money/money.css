@@ -1,3 +1,4 @@
-money {
-  color: blue;
+money .data {
+  color: var(--accent-color);
+  font-size: 3rem;
 }
