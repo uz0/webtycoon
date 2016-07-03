@@ -1,0 +1,34 @@
+/* fonts */
+@font-face {
+  font-family: 'Circle';
+  font-weight: 300;
+  font-style: normal;
+  src: url('/fonts/Circle300.ttf');
+}
+
+@font-face {
+  font-family: 'Circle';
+  font-weight: 500;
+  font-style: normal;
+  src: url('/fonts/Circle500.ttf');
+}
+
+@font-face {
+  font-family: 'Circle';
+  font-weight: 700;
+  font-style: normal;
+  src: url('/fonts/Circle700.ttf');
+}
+
+/* styling */
+:root {
+  font-family: Circle, Helvetica, sans-serif;
+  font-size: 16px;
+  color: white;
+  background-color: var(--base-color);
+}
+
+h2 {
+  font-size: 2rem;
+  color: white;
+}

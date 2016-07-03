@@ -1,0 +1,13 @@
+@import 'reset-css/reset.css';
+
+:root {
+  --accent-color: #38b16e;
+  --base-color: #333;
+  --block-bg-color: #3c3c3c;
+  --disabled-text-color: #676767;
+}
+
+::selection {
+  color: white;
+  background: var(--accent-color);
+}
