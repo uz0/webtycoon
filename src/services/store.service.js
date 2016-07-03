@@ -6,7 +6,10 @@ import configuration from '../configuration/prices';
 @Injectable()
 export default class StoreService {
 
-  constructor(site:SiteService, money:MoneyService) {
+  constructor(
+    site: SiteService,
+    money: MoneyService
+  ) {
     this.site = site;
     this.money = money;
   }

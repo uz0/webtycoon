@@ -8,10 +8,10 @@ ul
     [ngClass]="{'active':current==site.active}",
     (click)='site.setActive(current)'
   )
-  | {{ current.name }}
+    | {{ current.name }}
 
 h2(*ngIf='site.active.name') Current Site: {{site.active.name}}
 h3 Articles
 ul
-li(*ngFor='let article of site.active.articles')
-| {{article}}
+  li(*ngFor='let article of site.active.articles')
+    | {{article}}

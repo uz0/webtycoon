@@ -1,5 +1,5 @@
-export default class Site{
-  constructor(name){
+export default class Site {
+  constructor(name) {
     this.name = name;
     this.articles = [];
     this.adverts = [];

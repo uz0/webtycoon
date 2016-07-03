@@ -7,7 +7,7 @@ import StoreService from '../../services/store.service';
 })
 export default class Store {
 
-  constructor(store:StoreService) {
+  constructor(store: StoreService) {
     this.store = store;
   }
 

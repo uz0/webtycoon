@@ -1,4 +1,4 @@
-import { Injectable }    from '@angular/core';
+import {Injectable} from '@angular/core';
 
 @Injectable()
 export default class MoneyService {
@@ -6,11 +6,11 @@ export default class MoneyService {
     this.money = 100;
   }
 
-  get value(){
+  get value() {
     return this.money;
   }
 
-  addMoney(value){
+  addMoney(value) {
     this.money += value;
     return this.money;
   }
