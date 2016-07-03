@@ -15,15 +15,17 @@ export default class StoreService {
   }
 
   buy(type) {
-    let price = this.getPrice(type);
-    if (this.money.value < price) {
-      return;
-    }
+    if(this.site.list.length) {
+      let price = this.getPrice(type);
+      if (this.money.value < price) {
+        return;
+      }
 
-    this.money.addMoney(-price);
-    
-    let capitalizedType = type[0].toUpperCase() + type.slice(1);
-    this.site.active[`add${capitalizedType}`]();
+      this.money.addMoney(-price);
+      
+      let capitalizedType = type[0].toUpperCase() + type.slice(1);
+      this.site.active[`add${capitalizedType}`]();
+    }
   }
 
   getCount(type) {
