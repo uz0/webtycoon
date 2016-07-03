@@ -9,6 +9,7 @@ import Webtycoon from './components/webtycoon/webtycoon';
 import MoneyService from './services/money.service';
 import SiteService from './services/site.service';
 import StoreService from './services/store.service';
+import VisitorsService from './services/visitors.service';
 
 bootstrap(Webtycoon, [
   disableDeprecatedForms(),
@@ -16,7 +17,8 @@ bootstrap(Webtycoon, [
   
   MoneyService,
   SiteService,
-  StoreService
+  StoreService,
+  VisitorsService
 ]).catch(error => {
   console.log(error);
 });

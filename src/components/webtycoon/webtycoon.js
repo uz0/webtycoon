@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import Header from '../header/header';
 import Money from '../money/money';
 import Store from '../store/store';
+import Visitors from '../visitors/visitors';
 import Site from '../site/site';
 
 @Component({
@@ -12,7 +13,8 @@ import Site from '../site/site';
     Header,
     Money,
     Site,
-    Store
+    Store,
+    Visitors
   ]
 })
 export default class Webtycoon {

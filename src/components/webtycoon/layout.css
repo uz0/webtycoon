@@ -10,3 +10,8 @@ webtycoon {
 .aside {
 
 }
+
+.data {
+  color: var(--accent-color);
+  font-size: 3rem;
+}
