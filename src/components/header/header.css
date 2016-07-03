@@ -1,3 +1,33 @@
 webtycoon-header {
-  color: green;
+  
+}
+
+webtycoon-header h1 {
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+webtycoon-header h1 span {
+  border-right: .16rem solid white;
+  display: inline-block;
+  padding-right: 1rem;
+  vertical-align: middle;
+}
+
+webtycoon-header .icon {
+  margin-left: 1rem;
+  height: 3rem;
+  width: 3rem;
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+webtycoon-header .github {
+  background-image: url('/svg/github-logo.svg');
+}
+
+webtycoon-header .uz0 {
+  background-image: url('/svg/uz0.svg');
 }
