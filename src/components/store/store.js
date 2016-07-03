@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component} from '@angular/core';
 import StoreService from '../../services/store.service';
 import SiteService from '../../services/site.service';
 

@@ -16,7 +16,7 @@ export default class StoreService {
 
   buy(type) {
     if(!this.site.list.length) {
-      return
+      return;
     }
     
     let price = this.getPrice(type);
