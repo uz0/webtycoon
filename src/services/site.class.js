@@ -4,6 +4,7 @@ export default class Site {
     this.articles = [];
     this.adverts = [];
     this.copywriters = [];
+    this.visitorsPerSec = 0;
   }
 
   addArticle() {
