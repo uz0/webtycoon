@@ -1,10 +1,15 @@
+import loopConfiguration from '../configuration/loop';
+
 export default class Site {
   constructor(name) {
     this.name = name;
     this.articles = [];
     this.adverts = [];
     this.copywriters = [];
-    this.visitorsPerSec = 0;
+  }
+
+  get visitorsPerSec() {
+    return this.articles.length*loopConfiguration.articleCoefficient;
   }
 
   addArticle() {

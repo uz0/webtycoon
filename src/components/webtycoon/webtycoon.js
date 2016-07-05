@@ -5,6 +5,7 @@ import Money from '../money/money';
 import Store from '../store/store';
 import Visitors from '../visitors/visitors';
 import Site from '../site/site';
+import GameLoopService from '../../services/game.loop.service';
 
 @Component({
   selector: 'webtycoon',
@@ -15,8 +16,14 @@ import Site from '../site/site';
     Site,
     Store,
     Visitors
+  ],
+  providers: [
+    GameLoopService
   ]
 })
 export default class Webtycoon {
+  constructor(loop: GameLoopService) {
+
+  }
   
 }
