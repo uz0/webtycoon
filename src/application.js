@@ -8,7 +8,7 @@ import Webtycoon from './components/webtycoon/webtycoon';
 
 import MoneyService from './services/money.service';
 import SiteService from './services/site.service';
-import StoreService from './services/store.service';
+import ShopService from './services/shop.service';
 import VisitorsService from './services/visitors.service';
 
 bootstrap(Webtycoon, [
@@ -17,7 +17,7 @@ bootstrap(Webtycoon, [
   
   MoneyService,
   SiteService,
-  StoreService,
+  ShopService,
   VisitorsService
 ]).catch(error => {
   console.log(error);

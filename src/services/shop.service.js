@@ -4,7 +4,7 @@ import MoneyService from './money.service';
 import configuration from '../configuration/prices';
 
 @Injectable()
-export default class StoreService {
+export default class ShopService {
 
   constructor(
     site: SiteService,

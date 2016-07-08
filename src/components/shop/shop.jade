@@ -1,0 +1,5 @@
+h1 Shop
+div(*ngFor='let good of goods', (click)='shop.buy(good)' )
+  | {{good}} 
+  | x{{getCount(good)}}
+  | ${{getPrice(good)}}

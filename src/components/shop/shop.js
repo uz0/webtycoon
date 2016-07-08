@@ -1,18 +1,18 @@
 import {Component} from '@angular/core';
-import StoreService from '../../services/store.service';
+import ShopService from '../../services/shop.service';
 import SiteService from '../../services/site.service';
 
 @Component({
-  selector: 'store',
-  templateUrl: './components/store/store.html'
+  selector: 'shop',
+  templateUrl: './components/shop/shop.html'
 })
-export default class Store {
+export default class Shop {
 
   constructor(
-    store: StoreService,
+    shop: ShopService,
     site: SiteService
   ) {
-    this.store = store;
+    this.shop = shop;
     this.site = site;
 
     this.goods = ['article', 'advert', 'copywriter'];
@@ -20,7 +20,7 @@ export default class Store {
 
   getCount(type) {
     if(this.site.list.length) {
-      return this.store.getCount(type);
+      return this.shop.getCount(type);
     }
     
     return 0;
@@ -28,7 +28,7 @@ export default class Store {
 
   getPrice(type) {
     if(this.site.list.length) {
-      return this.store.getPrice(type);
+      return this.shop.getPrice(type);
     }
 
     return 0;

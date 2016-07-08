@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import MoneyService from './money.service';
 import SiteService from './site.service';
-import StoreService from './store.service';
+import ShopService from './shop.service';
 import loopConfiguration from '../configuration/loop';
 
 @Injectable()
@@ -9,11 +9,11 @@ export default class GameLoopService {
   constructor(
     money: MoneyService, 
     site:  SiteService, 
-    store: StoreService
+    shop: ShopService
   ) {
     this.site = site;
     this.money = money;
-    this.store = store;
+    this.shop = shop;
     var gameLoop = setInterval(function() {
       //TODO:
       //add functions addMoney and addArticle
@@ -35,7 +35,7 @@ export default class GameLoopService {
     if(this.site.list.length) {
       this.site.list.forEach(function(item, i) {
         for(let f = 0; f < item.copywriters.length; f++) {
-          this.store.buy('article');
+          this.shop.buy('article');
         }
         copyWritersCount = 0;
       });
