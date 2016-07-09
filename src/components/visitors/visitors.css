@@ -1,7 +1,7 @@
 visitors .data {
-  padding-left: 2rem;
-  background-image: url('/svg/github-logo.svg');
+  padding-left: 4rem;
+  background-image: url('/svg/visitors-icon.svg');
   background-repeat: no-repeat;
-  background-size: 1.5rem auto;
+  background-size: 3.4rem auto;
   background-position: left center;
 }

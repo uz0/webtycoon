@@ -13,13 +13,24 @@
   border: 0.08rem solid #fff;
   border-radius: 0.75rem;
   background-color: var(--block-bg-color);
-  background-image: url('/svg/github-logo.svg');
   background-repeat: no-repeat;
   background-size: 1.5rem auto;
   background-position: center;
   margin-right: 1rem;
   cursor: pointer;
   transition: .2s;
+}
+
+.article .icon {
+  background-image: url('/svg/article-icon.svg');
+}
+
+.advert .icon {
+  background-image: url('/svg/advert-icon.svg');
+}
+
+.copywriter .icon {
+  background-image: url('/svg/copywriter-icon.svg');
 }
 
 .good .icon:hover {
