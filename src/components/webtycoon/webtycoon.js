@@ -5,7 +5,7 @@ import Money from '../money/money';
 import Shop from '../shop/shop';
 import Visitors from '../visitors/visitors';
 import Site from '../site/site';
-import GameLoopService from '../../services/game.loop.service';
+import GameLoopService from '../../services/game-loop.service';
 
 @Component({
   selector: 'webtycoon',

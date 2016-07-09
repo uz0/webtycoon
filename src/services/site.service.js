@@ -17,7 +17,6 @@ export default class SiteService {
     let site = new Site(name);
     this.list.push(site);
     this.setActive(site);
-    console.log(this.list);
   }
 
   setActive(site){
