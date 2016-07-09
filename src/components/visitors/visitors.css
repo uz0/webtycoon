@@ -1,0 +1,7 @@
+visitors .data {
+  padding-left: 2rem;
+  background-image: url('/svg/github-logo.svg');
+  background-repeat: no-repeat;
+  background-size: 1.5rem auto;
+  background-position: left center;
+}

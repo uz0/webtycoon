@@ -9,7 +9,7 @@ export default class Site {
   }
 
   get visitorsPerSec() {
-    return this.articles.length*loopConfiguration.articleCoefficient;
+    return this.articles.length * loopConfiguration.articleCoefficient;
   }
 
   addArticle() {

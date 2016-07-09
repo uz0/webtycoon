@@ -8,10 +8,16 @@ webtycoon {
 }
 
 .aside {
-
+  margin-left: 2rem;
 }
 
 .data {
   color: var(--accent-color);
   font-size: 3rem;
+  margin-top: .5rem;
+}
+
+.bottom-offset {
+  margin-bottom: 1.5rem;
+  display: block;
 }
