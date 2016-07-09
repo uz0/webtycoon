@@ -1,14 +1,19 @@
-h1 Site
-input(type=text, [(ngModel)]='sitename')
-button((click)='site.addSite(sitename)') Add Site
-
-ul
-  li(
+.manager
+  .tab(
     *ngFor='let current of site.list',
     [ngClass]="{'active':current==site.active}",
     (click)='site.setActive(current)'
   )
     | {{ current.name }}
+  .tab.plus(*ngIf='!isEditing', (click)='isEditing = true')
+    | +
+  .new-site(*ngIf='isEditing')
+    input.tab(type='text', [(ngModel)]='sitename')
+    button.tab((click)='saveNewSite()') Ok
+  
+
+
+
 
 h2(*ngIf='site.active.name') Current Site: {{site.active.name}}
 h3 Articles

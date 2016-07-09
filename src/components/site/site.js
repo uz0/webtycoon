@@ -10,6 +10,13 @@ export default class Site {
   constructor(site: SiteService){
     this.sitename = '';
     this.site = site;
+    this.isEditing = true;
+  }
+
+  saveNewSite(){
+    this.isEditing = false;
+    this.site.addSite(this.sitename);
+    this.sitename = '';
   }
 
 }
