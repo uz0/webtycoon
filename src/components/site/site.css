@@ -1,7 +1,37 @@
-site {
-  color: black;
+site .manager {
+  margin-bottom: 1rem;
 }
 
-site li.active{
-  color: blue;
+site .manager .tab {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  border: 0.08rem solid;
+  border-radius: 0.75rem;
+  display: inline-block;
+  padding: 1rem;
+  cursor: pointer;
+  background: var(--block-bg-color);
+  transition: .2s;
+  color: var(--disabled-text-color);
+  outline: none;
+}
+
+site .manager .tab:hover {
+  background-color: var(--disabled-text-color);
+}
+
+site .manager .tab.active {
+  color: white;
+}
+
+site .manager .tab.plus {
+  color: var(--accent-color);
+}
+
+site .manager .new-site {
+  display: inline-block;
+}
+
+site .manager .new-site .tab:not(:disabled) {
+  color: white;
 }

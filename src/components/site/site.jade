@@ -7,20 +7,17 @@
     | {{ current.name }}
   .tab.plus(*ngIf='!isEditing', (click)='isEditing = true')
     | +
-  .new-site(*ngIf='isEditing')
-    input.tab(type='text', [(ngModel)]='sitename')
-    button.tab((click)='saveNewSite()') Ok
+  form.new-site(*ngIf='isEditing', (ngSubmit)='saveNewSite()')
+    input.tab(type='text', [(ngModel)]='sitename', name='sitename', placeholder = 'Your site\'s name goes here')
+    button.tab([disabled]='!sitename') Ok
   
-
-
-
-
-h2(*ngIf='site.active.name') Current Site: {{site.active.name}}
-h3 Articles
-ul
-  li(*ngFor='let article of site.active.articles')
-    | {{article}}
-h3 Adverts
-ul
-  li(*ngFor='let advert of site.active.adverts')
-    | {{advert}}
+.content
+  h2(*ngIf='site.active.name') Current Site: {{site.active.name}}
+  h3 Articles
+  ul
+    li(*ngFor='let article of site.active.articles')
+      | {{article}}
+  h3 Adverts
+  ul
+    li(*ngFor='let advert of site.active.adverts')
+      | {{advert}}

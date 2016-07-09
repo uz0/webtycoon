@@ -10,8 +10,8 @@
 .good .icon {
   width: 3rem;
   height: 3rem;
-  border: 1px solid #fff;
-  border-radius: 14px;
+  border: 0.08rem solid #fff;
+  border-radius: 0.75rem;
   background-color: var(--block-bg-color);
   background-image: url('/svg/github-logo.svg');
   background-repeat: no-repeat;
