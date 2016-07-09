@@ -12,6 +12,8 @@ const eslint     = require('gulp-eslint');
 const postcss    = require('gulp-postcss');
 const concat     = require('gulp-concat-css');
 
+const ghPages     = require('gulp-gh-pages');
+
 // run init tasks
 gulp.task('default', ['build']);
 gulp.task('start', ['build', 'watch', 'serve']);
@@ -93,6 +95,13 @@ gulp.task('static', () =>
     .src('./src/static/**')
     .pipe(plumber())
     .pipe(gulp.dest('dist'))
+);
+
+// project deploy
+gulp.task('deploy', ['build'], () =>
+  gulp
+    .src('dist/**/*')
+    .pipe(ghPages())
 );
 
 // onError
