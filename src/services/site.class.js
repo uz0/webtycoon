@@ -1,4 +1,4 @@
-import loopConfiguration from '../configuration/loop';
+import {ARTICLE_FACTOR} from '../configuration';
 
 export default class Site {
   constructor(name) {
@@ -9,7 +9,7 @@ export default class Site {
   }
 
   get visitorsPerSec() {
-    return this.articles.length * loopConfiguration.articleCoefficient;
+    return this.articles.length * ARTICLE_FACTOR;
   }
 
   addArticle() {

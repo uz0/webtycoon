@@ -1,7 +1,11 @@
 import {Injectable} from '@angular/core';
 import SiteService from './site.service';
 import MoneyService from './money.service';
-import configuration from '../configuration/prices';
+import {
+  article_price, 
+  advert_price, 
+  copywriter_price
+} from '../configuration';
 
 @Injectable()
 export default class ShopService {
@@ -36,7 +40,13 @@ export default class ShopService {
 
   getPrice(type) {
     let count = this.getCount(type);
-    return configuration[type](count);
+    let prices = {
+      article: article_price,
+      advert: advert_price,
+      copywriter: copywriter_price
+    };
+
+    return prices[type](count);
   }
 
 }
