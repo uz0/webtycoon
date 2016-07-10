@@ -12,12 +12,12 @@
     button.tab([disabled]='!sitename') Ok
   
 .content
-  h2(*ngIf='site.active.name') Current Site: {{site.active.name}}
-  h3 Articles
-  ul
-    li(*ngFor='let article of site.active.articles')
-      | {{article}}
-  h3 Adverts
-  ul
-    li(*ngFor='let advert of site.active.adverts')
-      | {{advert}}
+  .sidebar
+    ul
+      li(*ngFor='let advert of site.active.adverts')
+        | {{advert}}
+  .mainblock
+    h2(*ngIf='site.active.name') {{site.active.name}}
+    ul
+      li(*ngFor='let article of site.active.articles')
+        | {{article}}

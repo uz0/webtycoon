@@ -13,7 +13,7 @@ export default class Site {
   }
 
   addArticle() {
-    this.articles.push('text');
+    this.articles.push('new article');
   }
 
   addAdvert() {
