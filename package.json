@@ -6,6 +6,7 @@
   "scripts": {
     "start": "gulp start",
     "build": "gulp build",
+    "deploy": "gulp deploy",
     "postinstall": "webdriver-manager update",
     "test": "npm run e2e && npm run unit",
     "e2e": "npm run build && protractor",
