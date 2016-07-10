@@ -18,6 +18,7 @@ site .manager .tab {
 
 site .manager .tab:hover {
   background-color: var(--disabled-text-color);
+  color: white;
 }
 
 site .manager .tab.active {
@@ -34,4 +35,8 @@ site .manager .new-site {
 
 site .manager .new-site .tab:not(:disabled) {
   color: white;
+}
+
+site .manager .new-site input {
+  cursor: default;
 }
