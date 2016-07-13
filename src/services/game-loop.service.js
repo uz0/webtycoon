@@ -4,7 +4,8 @@ import SiteService from './site.service';
 import ShopService from './shop.service';
 import {
   LOOP_FREQUENCY, 
-  adverts_income
+  adverts_income,
+  ARTICLES_PER_CYCLE_BY_COPYWRITER
 } from '../configuration';
 
 @Injectable()
@@ -17,6 +18,7 @@ export default class GameLoopService {
     this.site = site;
     this.money = money;
     this.shop = shop;
+    this.coefficient = ARTICLES_PER_CYCLE_BY_COPYWRITER;
 
     setInterval(() => {
       this.advertWork();
@@ -35,9 +37,12 @@ export default class GameLoopService {
   }
 
   copywriterWork() {
-    this.site.list.forEach(item => {
-      item.copywriters.forEach(() => this.shop.buy('article'));
-    });
+    this.coefficient+=ARTICLES_PER_CYCLE_BY_COPYWRITER;
+    for(this.coefficient; this.coefficient>=1; this.coefficient--) {
+      this.site.list.forEach(item => {
+        item.copywriters.forEach(() => this.shop.buy('article'));
+      });
+    }
   }
 
 }
