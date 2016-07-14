@@ -1,6 +1,6 @@
 # Webtycoon
 
-Webtycoon - is an application that can help you fulfill the dream of limitless earnings in the Internet. Create your own sites, post articles, add advertisments, hire an army of copywriters and step by step, you will earn your first million in the Internet!
+Webtycoon - is an application that can help you fulfill the dream of limitless earnings in the Internet. Create your own sites, post articles, add advertisments, hire an army of copywriters and step by step, you will earn your first million on the Internet!
 
 ## Development
 
