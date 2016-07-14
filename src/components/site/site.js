@@ -6,14 +6,24 @@ import SiteService from '../../services/site.service';
   templateUrl: './components/site/site.html'
 })
 export default class Site {
-
   constructor(site: SiteService){
-    this.sitename = '';
     this.site = site;
+
+    // site manager vars
+    this.sitename = '';
     this.isEditing = true;
-    this.articles = [];
-    this.adverts = [];
-    this.fillArticles();
+  }
+
+  filter(array, limit) {
+    if(!array) array = [];
+
+    let length = array.length;
+    let newArray = array.slice(Math.max(length - limit, 0));
+
+    let remainder = Math.max(limit - length, 0);
+    let emptyElements = Array(remainder).fill('');
+
+    return newArray.concat(emptyElements);
   }
 
   saveNewSite(){
@@ -21,28 +31,4 @@ export default class Site {
     this.site.addSite(this.sitename);
     this.sitename = '';
   }
-
-  setActive(site){
-    this.site.setActive(site);
-    this.fillArticles();
-    var i;
-    for(i=0; (i<15) && (i<this.site.active.articles.length); i++){
-      this.articles[i] = this.site.active.articles[i];
-    }
-    for(i=0; (i<5) && (i<this.site.active.adverts.length); i++){
-      this.adverts[i] = this.site.active.adverts[i];
-    }
-
-  }
-
-  fillArticles(){
-    var i;
-    for(i=0; i<15; i++){
-      this.articles[i] = 'your article';
-    }
-    for(i=0; i<5; i++){
-      this.adverts[i] = 'your advert could be here';
-    }
-  }
-
 }

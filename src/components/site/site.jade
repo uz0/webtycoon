@@ -2,22 +2,30 @@
   .tab(
     *ngFor='let current of site.list',
     [ngClass]="{'active':current==site.active}",
-    (click)='setActive(current)'
+    (click)='site.setActive(current)'
   )
     | {{ current.name }}
   .tab.plus(*ngIf='!isEditing', (click)='isEditing = true')
     | +
   form.new-site(*ngIf='isEditing', (ngSubmit)='saveNewSite()')
-    input.tab(type='text', [(ngModel)]='sitename', name='sitename', placeholder = 'Your site\'s name goes here')
+    input.tab(
+      type='text',
+      [(ngModel)]='sitename',
+      name='sitename',
+      placeholder = 'Your site\'s name goes here'
+    )
     button.tab([disabled]='!sitename') Ok
-  
+
 .content
-  .sidebar
-    ul
-      li(*ngFor='let advert of adverts')
-        | {{advert}}
-  .mainblock
-    h2(*ngIf='site.active.name') {{site.active.name}}
-    ul
-      li(*ngFor='let article of articles')
-        | {{article}}
+  ul.sidebar
+    li(
+      *ngFor='let advert of filter(site.active.adverts, 5)',
+      [ngClass]="{'disabled': !advert}"
+    )
+      | {{advert || 'empty advert'}}
+  ul.mainblock
+    li(
+      *ngFor='let article of filter(site.active.articles, 15)',
+      [ngClass]="{'disabled': !article}"
+    )
+      | {{article || 'empty advert'}}

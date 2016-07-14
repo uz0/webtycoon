@@ -55,7 +55,7 @@ site .content .sidebar {
   border-bottom-left-radius: 0.75rem;
 }
 
-site .content .sidebar ul li {
+site .content .sidebar li {
   padding: 0.75rem;
   border: 0.08rem solid var(--accent-color);
   color: var(--accent-color);
@@ -64,7 +64,7 @@ site .content .sidebar ul li {
   background-color: var(--base-color);
 }
 
-site .content .sidebar ul li:last-of-type {
+site .content .sidebar li:last-of-type {
   margin-bottom: 0;
 }
 
@@ -91,11 +91,11 @@ site .content .mainblock ul {
   justify-content: space-between;
 }
 
-site .content .mainblock ul li {
+site .content .mainblock li {
   border: 0.08rem solid;
-  background-color: var(--block-bg-color); 
+  background-color: var(--block-bg-color);
   padding: 1rem;
-  margin: 1rem 0rem 0rem 0rem;  
+  margin: 1rem 0rem 0rem 0rem;
   box-sizing: border-box;
 }
 

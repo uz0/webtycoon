@@ -3,7 +3,7 @@ import MoneyService from './money.service';
 import SiteService from './site.service';
 import ShopService from './shop.service';
 import {
-  LOOP_FREQUENCY, 
+  LOOP_FREQUENCY,
   adverts_income,
   ARTICLES_PER_CYCLE_BY_COPYWRITER
 } from '../configuration';
@@ -11,8 +11,8 @@ import {
 @Injectable()
 export default class GameLoopService {
   constructor(
-    money: MoneyService, 
-    site:  SiteService, 
+    money: MoneyService,
+    site: SiteService,
     shop: ShopService
   ) {
     this.site = site;

@@ -13,11 +13,11 @@ export default class Site {
   }
 
   addArticle() {
-    this.articles.push('new article');
+    this.articles.push(`article ${this.articles.length}`);
   }
 
   addAdvert() {
-    this.adverts.push('advert');
+    this.adverts.push(`advert ${this.adverts.length}`);
   }
 
   addCopywriter() {
