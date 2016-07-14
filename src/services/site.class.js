@@ -17,11 +17,11 @@ export default class Site {
   }
 
   addAdvert() {
-    this.adverts.push('adverts');
+    this.adverts.push('advert');
   }
 
   addCopywriter() {
-    this.copywriters.push('copywriters');
+    this.copywriters.push('copywriter');
   }
 
 }

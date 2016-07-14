@@ -2,7 +2,7 @@
   .tab(
     *ngFor='let current of site.list',
     [ngClass]="{'active':current==site.active}",
-    (click)='site.setActive(current)'
+    (click)='setActive(current)'
   )
     | {{ current.name }}
   .tab.plus(*ngIf='!isEditing', (click)='isEditing = true')
@@ -14,10 +14,10 @@
 .content
   .sidebar
     ul
-      li(*ngFor='let advert of site.active.adverts')
+      li(*ngFor='let advert of adverts')
         | {{advert}}
   .mainblock
     h2(*ngIf='site.active.name') {{site.active.name}}
     ul
-      li(*ngFor='let article of site.active.articles')
+      li(*ngFor='let article of articles')
         | {{article}}
