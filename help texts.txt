@@ -1,0 +1,14 @@
+# Money
+These are your funds. You can use them to purchase things in the shop. You get revenue from visitors through ads.  
+
+# Visitors
+People visit your site to view articles. Use this to your advantage and make money with ads! 
+
+# Shop
+## Article
+Articles attract visitors to your site. You can buy them manually, or hire a copywriter to do it for you!
+## Advert
+Adverts convert visitor views into money.
+### Copywriter
+These guys help you make money by buying articles for you.
+
