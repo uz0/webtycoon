@@ -1,4 +1,5 @@
-import {ARTICLE_FACTOR} from '../configuration';
+import { ARTICLE_FACTOR } from '../configuration';
+import textGenerator from './textGenerator.class';
 
 export default class Site {
   constructor(name) {
@@ -6,6 +7,7 @@ export default class Site {
     this.articles = [];
     this.adverts = [];
     this.copywriters = [];
+    this.textGenerator = textGenerator;
   }
 
   get visitorsPerSec() {
@@ -13,11 +15,12 @@ export default class Site {
   }
 
   addArticle() {
-    this.articles.push(`article ${this.articles.length}`);
+    console.log(this.textGenerator);
+    this.articles.push(this.textGenerator.article());
   }
 
   addAdvert() {
-    this.adverts.push(`advert ${this.adverts.length}`);
+    this.adverts.push(this.textGenerator.advert());
   }
 
   addCopywriter() {

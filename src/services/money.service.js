@@ -3,7 +3,7 @@ import {Injectable} from '@angular/core';
 @Injectable()
 export default class MoneyService {
   constructor(){
-    this.money = 10000;
+    this.money = 10;
   }
 
   get value() {
