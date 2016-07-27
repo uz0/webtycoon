@@ -50,7 +50,7 @@ site .content {
 site .content .sidebar {
   width: 25%;
   background-color: var(--block-bg-color);
-  padding: 2rem 1rem 2rem 1rem;
+  padding: 2rem 1rem;
   border-top-left-radius: 0.75rem;
   border-bottom-left-radius: 0.75rem;
 }
@@ -75,7 +75,7 @@ site .content h3 {
 site .content .mainblock {
   box-sizing: border-box;
   width: 150%;
-  padding: 2rem 1rem 2rem 1rem;
+  padding: 2rem 1rem;
 }
 
 site .content .mainblock h2 {
@@ -95,7 +95,7 @@ site .content .mainblock li {
   border: 0.08rem solid;
   background-color: var(--block-bg-color);
   padding: 1rem;
-  margin: 1rem 0rem 0rem 0rem;
+  margin: 1rem 0rem 0rem;
   box-sizing: border-box;
 }
 
