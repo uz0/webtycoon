@@ -28,4 +28,4 @@
       *ngFor='let article of filter(site.active.articles, 15)',
       [ngClass]="{'disabled': !article}"
     )
-      | {{article || 'empty advert'}}
+      | {{article || 'empty article'}}
