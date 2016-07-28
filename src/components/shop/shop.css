@@ -19,7 +19,7 @@ shop .good .icon {
   background-position: center;
   margin-right: 1rem;
   cursor: pointer;
-  transition: .2s;
+  transition: 0.2s;
 }
 
 shop .good.article .icon {
@@ -38,13 +38,9 @@ shop .good .icon:hover {
   background-color: var(--disabled-text-color);
 }
 
-shop .good .info {
-
-}
-
 shop .good .info .name {
   font-size: 1.1rem;
-  margin-bottom: .2rem;
+  margin-bottom: 0.2rem;
   display: block;
 }
 

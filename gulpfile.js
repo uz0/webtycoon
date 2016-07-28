@@ -41,7 +41,7 @@ gulp.task('watch', () => {
 });
 
 // transpile & move js
-gulp.task('js', ['lint'], () =>
+gulp.task('js', ['js-lint'], () =>
   browserify('src/application.js', {
     debug: true
   })
@@ -52,7 +52,7 @@ gulp.task('js', ['lint'], () =>
   .pipe(gulp.dest('dist'))
 );
 
-gulp.task('lint', () =>
+gulp.task('js-lint', () =>
   gulp
     .src('src/**/*.js')
     .pipe(eslint())
@@ -60,15 +60,14 @@ gulp.task('lint', () =>
 );
 
 // work with stylesheets
-gulp.task('css', () =>
+gulp.task('css', ['css-lint'], () =>
   gulp
-    .src(['src/webtycoon/webtycoon.css', 'src/components/**/*.css'])
+    .src('src/components/**/*.css')
     .pipe(concat('bundle.css', {
       inlineImports: false,
       rebaseUrls: false
     }))
     .pipe(postcss([
-      require('stylelint')(),
       require('autoprefixer')('last 2 version'),
       require('postcss-import'),
       require('postcss-css-variables'),
@@ -77,6 +76,14 @@ gulp.task('css', () =>
     ]))
     .on('error', onError)
     .pipe(gulp.dest('dist'))
+);
+
+gulp.task('css-lint', () =>
+  gulp
+    .src('src/components/**/*.css')
+    .pipe(postcss([
+      require('stylelint')(),
+    ]))
 );
 
 // jade templates

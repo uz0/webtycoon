@@ -1,14 +1,10 @@
-webtycoon-header {
-  
-}
-
 webtycoon-header h1 {
   font-size: 4rem;
   font-weight: 500;
 }
 
 webtycoon-header h1 span {
-  border-right: .16rem solid white;
+  border-right: 0.16rem solid white;
   display: inline-block;
   padding-right: 1rem;
   vertical-align: middle;

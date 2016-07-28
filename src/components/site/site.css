@@ -11,7 +11,7 @@ site .manager .tab {
   padding: 1rem;
   cursor: pointer;
   background: var(--block-bg-color);
-  transition: .2s;
+  transition: 0.2s;
   color: var(--disabled-text-color);
   outline: none;
 }
@@ -95,7 +95,6 @@ site .content .mainblock li {
   border: 0.08rem solid;
   background-color: var(--block-bg-color);
   padding: 1rem;
-  margin: 1rem 0rem 0rem;
+  margin-top: 1rem;
   box-sizing: border-box;
 }
-

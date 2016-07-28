@@ -15,7 +15,7 @@ webtycoon {
 .data {
   color: var(--accent-color);
   font-size: 3rem;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
 }
 
 .bottom-offset {
