@@ -62,7 +62,7 @@ gulp.task('js-lint', () =>
 // work with stylesheets
 gulp.task('css', ['css-lint'], () =>
   gulp
-    .src('src/components/**/*.css')
+    .src(['src/components/webtycoon/webtycoon.css', 'src/components/**/*.css'])
     .pipe(concat('bundle.css', {
       inlineImports: false,
       rebaseUrls: false
