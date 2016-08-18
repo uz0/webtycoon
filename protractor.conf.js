@@ -13,9 +13,22 @@ exports.config = {
     'src/**/*.e2e.js'
   ],
 
-  useAllAngular2AppRoots: true,
-  directConnect: true,
-  chromeOnly:true
+  framework: 'jasmine2',
+
+  capabilities: {
+    'browserName': 'chrome',
+    'chromeOptions': {
+      'args': ['show-fps-counter=true']
+    }
+  },
+
+  onPrepare: function() {
+    browser.ignoreSynchronization = true;
+  },
+
+  useAllAngular2AppRoots: true
+  // directConnect: true,
+  // chromeOnly:true
 };
 
 

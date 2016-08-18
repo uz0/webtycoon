@@ -8,6 +8,6 @@ describe('test component', () => {
   });
 
   it('shows a header with test text', () => {
-    expect(element(by.css('aside visitors data')).getText()).toEqual('0');
+    expect(element(by.css('.aside visitors .data')).getText()).toEqual('0');
   });
 });
