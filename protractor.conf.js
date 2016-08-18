@@ -13,7 +13,9 @@ exports.config = {
     'src/**/*.e2e.js'
   ],
 
-  useAllAngular2AppRoots: true
+  useAllAngular2AppRoots: true,
+  directConnect: true,
+  chromeOnly:true
 };
 
 
