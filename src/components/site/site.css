@@ -42,9 +42,12 @@ site .manager .new-site input {
 }
 
 site .content {
+  width: 55rem;
   border: 0.08rem solid;
   border-radius: 0.75rem;
-  display: flex;
+  display: grid;
+  grid-columns: 150px 150px 150px; 
+  grid-rows: 50px 150px 50px; 
 }
 
 site .content .sidebar {
@@ -75,14 +78,6 @@ site .content h3 {
 site .content .mainblock {
   box-sizing: border-box;
   width: 150%;
-  padding: 2rem 1rem;
-}
-
-site .content .mainblock h2 {
-  text-align: center;
-  border: 0.08rem solid;
-  background-color: var(--block-bg-color);
-  padding: 0.75rem;
 }
 
 site .content .mainblock ul {
@@ -95,6 +90,17 @@ site .content .mainblock li {
   border: 0.08rem solid;
   background-color: var(--block-bg-color);
   padding: 1rem;
-  margin-top: 1rem;
+  margin: 1rem;
   box-sizing: border-box;
+  height: 5.5rem;
+  width: 8rem;
+}
+
+site .content .advert {
+  color:green;
+}
+
+site .content .mainblock li:nth-child(1) {
+  height: 14rem;
+  width: 20rem;
 }
