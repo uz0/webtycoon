@@ -5,8 +5,7 @@ import {
 } from '@angular/core/testing';
 import ShopService from './shop.service.js';
 import {
-  article_price, 
-  STARTUP_CAPITAL
+  article_price
 } from '../configuration';
 
 describe('Shop service test', () => {
@@ -17,7 +16,7 @@ describe('Shop service test', () => {
 
   let moneyFixture = {
     value: 50
-  }
+  };
 
   let shop = new ShopService(siteFixture, moneyFixture);
 
