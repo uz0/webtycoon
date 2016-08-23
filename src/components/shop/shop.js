@@ -34,4 +34,9 @@ export default class Shop {
     return 0;
   }
 
+  buy(good) {
+    let name = this.site.active.name;
+    this.shop.buy(good, name);
+  }
+
 }

@@ -18,7 +18,7 @@ export default class ShopService {
     this.money = money;
   }
 
-  buy(type) {
+  buy(type, name) {
     if(!this.site.list.length) {
       return;
     }
@@ -29,9 +29,12 @@ export default class ShopService {
     }
 
     this.money.addMoney(-price);
-    
+    let site = this.site.list.filter(site =>
+      site.name === name
+    )[0];
+    let siteIndex = this.site.list.indexOf(site);
     let capitalizedType = type[0].toUpperCase() + type.slice(1);
-    this.site.active[`add${capitalizedType}`]();
+    this.site.list[siteIndex][`add${capitalizedType}`]();
   }
 
   getCount(type) {
