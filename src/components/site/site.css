@@ -42,65 +42,96 @@ site .manager .new-site input {
 }
 
 site .content {
-  width: 55rem;
   border: 0.08rem solid;
   border-radius: 0.75rem;
-  display: grid;
-  grid-columns: 150px 150px 150px; 
-  grid-rows: 50px 150px 50px; 
-}
-
-site .content .sidebar {
-  width: 25%;
-  background-color: var(--block-bg-color);
-  padding: 2rem 1rem;
-  border-top-left-radius: 0.75rem;
-  border-bottom-left-radius: 0.75rem;
-}
-
-site .content .sidebar li {
-  padding: 0.75rem;
-  border: 0.08rem solid var(--accent-color);
-  color: var(--accent-color);
-  text-align: center;
-  margin-bottom: 1rem;
-  background-color: var(--base-color);
-}
-
-site .content .sidebar li:last-of-type {
-  margin-bottom: 0;
-}
-
-site .content h3 {
-  display: inline-block;
+  display: flex;
+  width: 40rem;
 }
 
 site .content .mainblock {
   box-sizing: border-box;
-  width: 150%;
-}
-
-site .content .mainblock ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 site .content .mainblock li {
+  display: inline-flex;
   border: 0.08rem solid;
   background-color: var(--block-bg-color);
-  padding: 1rem;
-  margin: 1rem;
+  padding-top: 0.6rem;
+  padding-right: 1rem;
+  padding-left: 1.2rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
   box-sizing: border-box;
-  height: 5.5rem;
-  width: 8rem;
+  height: 6rem;
+  width: 8.5rem;
+  line-height: 1.3rem;
+  font-size: 1.1rem;
 }
 
-site .content .advert {
-  color:green;
+site .content .mainblock .disabled {
+  opacity: 0.6;
+}
+
+site .content .mainblock .article li {
+  display: table;
+}
+
+site .content .mainblock .advert {
+  color: var(--accent-color);
+  height: 3.5rem;
+}
+
+site .content .mainblock .actions {
+  font-size: 0.9rem;
 }
 
 site .content .mainblock li:nth-child(1) {
-  height: 14rem;
-  width: 20rem;
+  display: block;
+  height: 13rem;
+  width: 18rem;
+  float: left;
+  margin-top: 1.3rem;
+  margin-left: 1.3rem;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+}
+
+site .content .mainblock li:nth-child(4n+6) {
+  margin-left: 1.3rem;
+}
+
+site .content .mainblock li:nth-child(-n+2) {
+  margin-top: 1.3rem;
+}
+
+site .content .mainblock .article .info {
+  display: table-cell;
+  padding-bottom: 0.4rem;
+  vertical-align: bottom;
+}
+
+site .content .mainblock .article:nth-child(1) .info .actions:before {
+  content: 'читать ';
+}
+
+site .content .mainblock .article .info .actions .comment {
+  background-image: url(/svg/comment-icon.svg);
+  vertical-align: middle;
+}
+
+site .content .mainblock .article .info .actions .repost {
+  background-image: url(/svg/repost-icon.svg);
+  vertical-align: sub;
+}
+
+site .content .mainblock .article .info .actions .repost,
+site .content .mainblock .article .info .actions .comment {
+  margin-left: 0.9rem;
+  display: inline-block;
+  width: 0.9rem;
+  height: 1rem;
+  background-repeat: no-repeat;
+  background-size: .9rem auto;
+  background-position: 50%;
+  cursor: pointer;
 }

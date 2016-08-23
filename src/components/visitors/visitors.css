@@ -1,3 +1,7 @@
+visitors {
+  padding-top: 1.5rem;
+}
+
 visitors .data {
   padding-left: 4rem;
   background-image: url('/svg/visitors-icon.svg');

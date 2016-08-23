@@ -18,13 +18,18 @@
 
 .content
   ul.mainblock
-    li(
+    li.article(
       *ngFor='let article of filter(site.active.articles, 9)',
       [ngClass]="{'disabled': !article}"
     )
-      | {{article || 'empty article'}}
+      .info
+        | {{article || 'empty article'}}
+        .actions
+          | 8 мин
+          .comment
+          .repost
 
-    li(
+    li.advert(
       *ngFor='let advert of filter(site.active.adverts, 4)',
       [ngClass]="{advert:true, 'disabled': !advert}"
     )

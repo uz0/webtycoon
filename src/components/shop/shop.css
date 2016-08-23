@@ -52,3 +52,7 @@ shop .good .info .price {
   color: var(--accent-color);
   font-size: 1.4rem;
 }
+
+shop .good:nth-child(1) {
+  margin-top: 3.5rem;
+}
