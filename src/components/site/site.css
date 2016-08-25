@@ -42,59 +42,85 @@ site .manager .new-site input {
 }
 
 site .content {
+  width: 40rem;
+  box-sizing: border-box;
   border: 0.08rem solid;
   border-radius: 0.75rem;
-  display: flex;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  padding-left: 1.2rem;
 }
 
-site .content .sidebar {
-  width: 25%;
+site .content .advert,
+site .content .article {
+  border: 0.08rem solid;
   background-color: var(--block-bg-color);
-  padding: 2rem 1rem;
-  border-top-left-radius: 0.75rem;
-  border-bottom-left-radius: 0.75rem;
+  padding: 0.6rem 0.8rem 0.3rem;
+  box-sizing: border-box;
+  width: 8.5rem;
+  line-height: 1.3rem;
+  font-size: 1.1rem;
+  display: inline-flex;
+  margin-right: 1rem;
 }
 
-site .content .sidebar li {
-  padding: 0.75rem;
-  border: 0.08rem solid var(--accent-color);
-  color: var(--accent-color);
-  text-align: center;
+site .content .article {
   margin-bottom: 1rem;
-  background-color: var(--base-color);
+  align-items: flex-end;
+  height: 6rem;
 }
 
-site .content .sidebar li:last-of-type {
-  margin-bottom: 0;
+site .content .article:nth-child(1) {
+  height: 12.95rem;
+  width: 18rem;
+  float: left;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  padding-left: 1.2rem;
 }
 
-site .content h3 {
+site .content .advert {
+  color: var(--accent-color);
+  height: 3.5rem;
+  font-size: 1rem;
+  padding-bottom: 0.6rem;
+}
+
+site .content .disabled {
+  opacity: 0.6;
+}
+
+site .content .actions {
+  font-size: 0.9rem;
+}
+
+site .content .mainblock .article .info {
+  padding-bottom: 0.4rem;
+  vertical-align: bottom;
+}
+
+site .content .article:nth-child(1) .info .actions:before {
+  content: 'читать ';
+}
+
+site .content .article .info .actions .comment {
+  background-image: url(/svg/comment-icon.svg);
+  vertical-align: middle;
+}
+
+site .content .article .info .actions .repost {
+  background-image: url(/svg/repost-icon.svg);
+  vertical-align: sub;
+}
+
+site .content .article .info .actions .repost,
+site .content .article .info .actions .comment {
+  margin-left: 0.9rem;
   display: inline-block;
-}
-
-site .content .mainblock {
-  box-sizing: border-box;
-  width: 150%;
-  padding: 2rem 1rem;
-}
-
-site .content .mainblock h2 {
-  text-align: center;
-  border: 0.08rem solid;
-  background-color: var(--block-bg-color);
-  padding: 0.75rem;
-}
-
-site .content .mainblock ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-site .content .mainblock li {
-  border: 0.08rem solid;
-  background-color: var(--block-bg-color);
-  padding: 1rem;
-  margin-top: 1rem;
-  box-sizing: border-box;
+  width: 0.9rem;
+  height: 1rem;
+  background-repeat: no-repeat;
+  background-size: 0.9rem auto;
+  background-position: 50%;
+  cursor: pointer;
 }

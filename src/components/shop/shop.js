@@ -15,7 +15,7 @@ export default class Shop {
     this.shop = shop;
     this.site = site;
 
-    this.goods = ['article', 'advert', 'copywriter'];
+    this.goods = ['article', 'copywriter', 'advert'];    
   }
 
   getCount(type) {
@@ -32,6 +32,11 @@ export default class Shop {
     }
 
     return 0;
+  }
+
+  buy(good) {
+    let name = this.site.active.name;
+    this.shop.buy(good, name);
   }
 
 }

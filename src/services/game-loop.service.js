@@ -40,7 +40,7 @@ export default class GameLoopService {
     this.coefficient+=ARTICLES_PER_CYCLE_BY_COPYWRITER;
     for(this.coefficient; this.coefficient>=1; this.coefficient--) {
       this.site.list.forEach(item => {
-        item.copywriters.forEach(() => this.shop.buy('article'));
+        item.copywriters.forEach(() => this.shop.buy('article', item.name));
       });
     }
   }

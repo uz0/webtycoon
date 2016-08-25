@@ -10,13 +10,22 @@ export default class SiteService {
   }
 
   addSite(name){
+    let double = false;
     if (!name){
       return;
     }
-
-    let site = new Site(name);
-    this.list.push(site);
-    this.setActive(site);
+    
+    this.list.forEach(item => {
+      if(item.name === name) {
+        double = true;
+      }
+    });
+    
+    if(!double) {
+      let site = new Site(name);
+      this.list.push(site);
+      this.setActive(site);
+    }
   }
 
   setActive(site){

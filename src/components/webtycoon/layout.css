@@ -1,11 +1,6 @@
 webtycoon {
-  padding: 4rem;
+  padding: 2.5rem 4rem 4rem;
   display: flex;
-}
-
-.main {
-  min-width: 50%;
-  max-width: 75%;
 }
 
 .aside {

@@ -17,15 +17,20 @@
     button.tab([disabled]='!sitename') Ok
 
 .content
-  ul.sidebar
-    li(
-      *ngFor='let advert of filter(site.active.adverts, 5)',
-      [ngClass]="{'disabled': !advert}"
-    )
-      | {{advert || 'empty advert'}}
-  ul.mainblock
-    li(
-      *ngFor='let article of filter(site.active.articles, 15)',
+  .article(
+      *ngFor='let article of filter(site.active.articles, 9)',
       [ngClass]="{'disabled': !article}"
-    )
+  )
+    .info
       | {{article || 'empty article'}}
+      .actions
+        | 8 мин
+        .comment
+        .repost
+
+  .advert(
+    *ngFor='let advert of filter(site.active.adverts, 4)',
+    [ngClass]="{advert:true, 'disabled': !advert}"
+  )
+    | {{advert || 'empty advert'}}
+    | x
