@@ -1,4 +1,4 @@
-<div *ngFor="let good of goods" (click)="shop.buy(good)" [ngClass]="good" class="good"><div class="icon"></div><div class="info"><div class="name"> 
+<div *ngFor="let good of goods" (click)="buy(good)" [ngClass]="good" class="good"><div class="icon"></div><div class="info"><div class="name"> 
 {{good}}<span class="count"> 
 x{{getCount(good)}}</span></div><div class="price"> 
 ${{getPrice(good)}}</div></div></div>
