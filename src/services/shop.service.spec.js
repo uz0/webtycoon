@@ -10,12 +10,31 @@ import {
 
 describe('Shop service test', () => {
   let siteFixture = {
-    list: ['site1', ' site2'],
-    active: {articles: ['article 0', 'article 1']}
+    list: [ 
+      {
+        name: 'site.ru',  
+        articles: ['article 0', 'article 1'],
+        adverts: ['advert 0'],
+        copywriters: ['copywriter'],
+        addArticle: () => siteFixture.active.articles.push('article 2'),
+        addAdvert: () => siteFixture.active.adverts.push('advert 1'),
+        addCopywriter: () => siteFixture.active.copywriters.push('copywriter')
+      },
+      {
+        name: 'site2.ru'
+      }
+    ],
+    active: {
+      name: 'site.ru',
+      articles: ['article 0', 'article 1'],
+      adverts: ['advert 0'],
+      copywriters: ['copywriter']
+    }
   };
 
   let moneyFixture = {
-    value: 50
+    value: 10000,
+    addMoney: income => {}
   };
 
   let shop = new ShopService(siteFixture, moneyFixture);
@@ -26,6 +45,25 @@ describe('Shop service test', () => {
 
   it('getPrice works only with lower case', () => {
     expect(shop.getPrice('article')).toBe(article_price(2));
+  });
+
+  describe('buy function', () => {
+    console.log
+
+    it('should buy article', () => {
+      shop.buy('article', siteFixture.active.name);
+      expect(shop.getCount('article')).toBe(3);
+    });
+
+    it('should buy advert', () => {
+      shop.buy('advert', siteFixture.active.name);
+      expect(shop.getCount('advert')).toBe(2);
+    });
+
+    it('should buy copywriter', () => {
+      shop.buy('copywriter', siteFixture.active.name);
+      expect(shop.getCount('copywriter')).toBe(2);
+    });    
   });
 
 });
